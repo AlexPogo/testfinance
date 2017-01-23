@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="mn.factory.testanimation.testanimation.models.FinanceModel" />
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/main_item_fav"
+            app:layout_widthPercent="20%"
+            app:paddingEnd="@dimen/activity_horizontal_margin"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:src="@{model.fav ? @drawable/ic_main_item_bell_active : @drawable/ic_main_item_bell_inactive}" />
+
+        <TextView
+            android:id="@+id/main_item_name"
+            app:layout_widthPercent="20%"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/main_item_fav"
+            android:fontFamily="@string/roboto_regular"
+            android:text="@{model.name}"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/main_item_price"
+            app:layout_widthPercent="35%"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/main_item_name"
+            android:fontFamily="@string/roboto_regular"
+            android:text="@{model.price}"
+            android:paddingStart="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/main_item_dif"
+            app:layout_widthPercent="25%"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:drawablePadding="5dp"
+            android:textSize="18sp"
+            android:drawableStart="@{model.grow ? @drawable/ic_main_item_arrow_up : @drawable/ic_main_item_arrow_down}"
+            android:fontFamily="@string/roboto_regular"
+            android:text="@{model.diff}"
+            android:textColor="@{model.grow ? @color/grow_green_color : @color/grow_red_color}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/main_item_name"
+            android:background="@color/line_gray_color" />
+    </android.support.percent.PercentRelativeLayout>
+</layout>

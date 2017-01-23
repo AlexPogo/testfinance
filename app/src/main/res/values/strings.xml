@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Finance</string>
+    <string-array name="main_tabs">
+        <item>STOCKS</item>
+        <item>CURRENCIES</item>
+        <item>COMMODITIES</item>
+        <item>ALERTS</item>
+    </string-array>
+    <string-array name="item_tabs">
+        <item>DAY</item>
+        <item>5 DAYS</item>
+        <item>MONTH</item>
+        <item>3 MTH</item>
+        <item>YEAR</item>
+    </string-array>
+    <string-array name="bar_filter_names">
+        <item>All</item>
+        <item>Alerts</item>
+    </string-array>
+
+    //fonts
+    <string name="roboto_medium">sans-serif-medium</string>
+    <string name="roboto_regular">sans-serif</string>
+
+    //menu btn bar
+    <string name="menu_vector_path" translatable="false">M20 30,L80 30,M20 50,L80 50,M20 70,L80 70</string>
+    //back btn bar
+    <string name="back_vector_path" translatable="false">M20 50,L50 25,M20 50,L80 50,M50 75,L20 50</string>
+</resources>

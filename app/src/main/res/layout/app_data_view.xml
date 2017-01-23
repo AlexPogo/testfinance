@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_bar_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/app_bar_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:paddingStart="72dp"
+        android:paddingEnd="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/roboto_regular"
+            android:text="Jul 12  12:35 p.m."
+            android:textColor="#99c6d8ad"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/app_data_price"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/roboto_medium"
+            android:text="19 480.25"
+            android:lineSpacingMultiplier="1"
+            android:lineSpacingExtra="0dp"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/white"
+            android:letterSpacing="0"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/roboto_regular"
+            android:text="0.13 (0,35 %)"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/roboto_medium"
+            android:text="ADD ALERT"
+            android:textColor="#88000000"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabMode="scrollable"
+        android:layout_alignParentBottom="true"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@color/tab_unselected_color" />
+</RelativeLayout>

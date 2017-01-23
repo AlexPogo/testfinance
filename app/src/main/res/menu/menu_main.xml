@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/spinner"
+        android:background="@android:color/white"
+        android:title="ActionBar Spinner"
+        app:actionViewClass="android.widget.Spinner"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_bar_settings_btn"
+        android:actionViewClass="android.widget.ImageView"
+        android:title="Settings"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/ic_bar_plus_btn"
+        android:actionViewClass="android.widget.ImageView"
+        android:title="Add"
+        app:showAsAction="always" />
+</menu>
